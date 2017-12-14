@@ -3,7 +3,6 @@ body {
 	background: #ffffff;
 	font-family: 'Muli', sans-serif;
 	font-style: normal;
-	font-weight: 300;
 	overflow-x: hidden;
 	height: 100%;
 	width: 100%;
@@ -39,4 +38,19 @@ body {
 	margin-top: 80px;
 	text-align: center;
 	vertical-align: text-bottom;
+}
+
+.div-base{
+	width: 100%;
+	height: 38px;
+	background: #CCCCCC;
+	margin-bottom: 1px;
+	align-content: center;
+}
+.div-txt{
+	font-family: arial;
+	margin: 20px;
+	font-size: 20px;
+	height: 38px;
+	text-align: center;
 }
