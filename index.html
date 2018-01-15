@@ -302,6 +302,7 @@
 							var GameScore = Bmob.Object.extend("feedback");
 							var gameScore = new GameScore();
 							if(uname.length > 0) {
+								gameScore.set("from","LinSpace_web");
 								gameScore.set("content", uname);
 								gameScore.set("contact", msg);
 								gameScore.save(null, {
