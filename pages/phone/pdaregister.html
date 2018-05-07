@@ -77,6 +77,8 @@
 							var addpwd2 = $.md5(cat);
 							var cat2 =addpwd2.substring(8,24);
 							bt.innerText = "请点击链接~!";
+//							bt.innerText = cat2;
+
 							var url ="http://192.168.0.19:8080/Assist/RegisterCode"+"?json="+cat2;
 							document.getElementById("changeurl").href = url; 
 							theurl.innerText = "请点击--进行注册"
