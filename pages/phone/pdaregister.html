@@ -50,9 +50,14 @@
 						<div class="wow fadeInUp" data-wow-delay="0.6s">
 							<form id="contact-form">
 								<div class="col-md-4 col-sm-4">
+									<input id="ipadress" type="text" class="form-control" name="ipadress" placeholder="输入IP地址">
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<input id="port" type="text" class="form-control" name="port" placeholder="输入端口号">
+								</div>
+								<div class="col-md-4 col-sm-4">
 									<input id="uname" type="text" class="form-control" name="name" placeholder="输入注册码">
 								</div>
-
 								<div class="col-md-offset-9 col-md-3 col-sm-offset-3 col-sm-6">
 									<button id="submit" type="button" class="form-control">生成链接</button>
 								</div>
@@ -72,6 +77,8 @@
 						var theurl = document.getElementById("changeurl");
 						bt.onclick = function() {
 							var uname = document.getElementById("uname").value;
+							var uipadress = document.getElementById("ipadress").value;
+							var uport = document.getElementById("port").value;
 							var addpwd = $.md5(uname + "fzkj601");
 							var cat=addpwd.substring(8,24);
 							var addpwd2 = $.md5(cat);
@@ -79,7 +86,7 @@
 							bt.innerText = "请点击链接~!";
 //							bt.innerText = cat2;
 
-							var url ="http://192.168.0.19:8080/Assist/RegisterCode"+"?json="+cat2;
+							var url ="http://"+uipadress+":"+uport+"/Assist/RegisterCode"+"?json="+cat2;
 							document.getElementById("changeurl").href = url; 
 							theurl.innerText = "请点击--进行注册"
 //							theurl.setColor(#aaaaaa);
